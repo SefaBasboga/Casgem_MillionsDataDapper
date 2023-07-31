@@ -1,0 +1,79 @@
+﻿@model List<Casgem_MillionsDataDapper.DAL.Plates>
+@{
+    Layout = null;
+}
+
+
+
+<br />
+<br />
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<div class="container">
+
+    <div class="col-xl-12">
+        <h5 class="mt-4">4 Milyon Plaka Verisi</h5>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card text-white bg-primary ">
+                    <h5 class="card-header text-white">En Fazla Olan Plaka</h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@ViewData["plateMax"] -- @ViewData["countMaxPlate"]</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-white bg-success ">
+                    <h5 class="card-header text-white">En Az Olan Plaka</h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@ViewData["plateMin"] -- @ViewData["countMinPlate"]</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-white bg-warning ">
+                    <h5 class="card-header text-white">En Çok Tercih Edilen Vites </h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@ViewData["shiftType"] -- @ViewData["shiftTypeCount"]</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-white bg-secondary ">
+                    <h5 class="card-header text-white">En Fazla Olan Araç Markası</h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@ViewData["brandMax"] -- @ViewData["countMaxBrand"] adet</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card text-white bg-danger ">
+                    <h5 class="card-header text-white">En Az Olan Araç Markası</h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@ViewData["brandMin"] -- @ViewData["countMinBrand"] adet</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card text-white bg-info ">
+                    <h5 class="card-header text-white">En Fazla Tercih Edilen Yakıt Türü</h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@ViewData["fuelType"] -- @ViewData["fuelTypeCount"]</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-white bg-info " f>
+                    <h5 class="card-header text-white">En Fazla Tercih Edilen Renk</h5>
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@ViewData["colorType"] -- @ViewData["colorTypeCount"]</h5>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
