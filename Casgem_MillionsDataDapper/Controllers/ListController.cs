@@ -8,15 +8,16 @@ namespace Casgem_MillionsDataDapper.Controllers
     public class ListController : Controller
     {
         private readonly string _connectionString = "Server = DESKTOP-H5NLS4J; initial catalog = CARPLATES; integrated security = true";
-        public async  Task<IActionResult> Index(string s = "-")
+
+       
+    public async  Task<IActionResult> Index(string s = "-")
         {
-       await using var conneciton = new SqlConnection(_connectionString);
-          
+            await using var conneciton = new SqlConnection(_connectionString);
 
             if (s == "-")
             {
 
-                var values =  conneciton.QueryAsync<Plates>("SELECT top 100 * FROM PLATES ");
+                var values =  conneciton.QueryAsync<Plates>("SELECT Top 100 * FROM PLATES ");
                 return View(values);
             }
             else
